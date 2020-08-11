@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'goods-detail',
-  templateUrl: './goods-detail.component',
-  styles: ['/goods-detail.component']
+  templateUrl: './good-detail.component.html',
+  styles: ['/good-detail.component.css']
 })
 export class GoodsDetailComponent {
 
