@@ -1,8 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { DataService } from '../../data.service';
 
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+
+//declare var $: any;
+//import * as $ from 'jquery';
+import $ = require('jquery');
 
 interface imgSlider  {
   imgPath: string,
@@ -30,7 +34,10 @@ export class TopBannerComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-   this.get_imageSlider()
+   this.get_imageSlider();
+  }
+  ngAfterViewInit(){
+   //$('#carouselExampleCaptions').carousel();
   }
   get_imageSlider(){
     this.dataService.getData().subscribe(

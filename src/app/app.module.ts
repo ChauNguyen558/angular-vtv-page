@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -24,6 +25,7 @@ import { DataService } from './data.service';
     FormsModule,
     HttpClientModule,
     AppRoutingModule ,
+    NgbModule
     ],
   declarations: [ 
     AppComponent, 
