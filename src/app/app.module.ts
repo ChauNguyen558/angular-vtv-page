@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -18,6 +19,7 @@ import { NumberPipe } from './number.pipe';
 import { TopBannerComponent } from './component/top-banner/top-banner.component';
 
 import { DataService } from './data.service';
+import { CarouselAnimationComponent } from './component/carousel-animation/carousel-animation.component';
 
 @NgModule({
   imports:      [ 
@@ -25,7 +27,8 @@ import { DataService } from './data.service';
     FormsModule,
     HttpClientModule,
     AppRoutingModule ,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
     ],
   declarations: [ 
     AppComponent, 
@@ -39,6 +42,7 @@ import { DataService } from './data.service';
     SignUpComponent,
     NumberPipe,
     TopBannerComponent,
+    CarouselAnimationComponent,
    
 
      ],
