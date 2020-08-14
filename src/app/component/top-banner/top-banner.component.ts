@@ -7,6 +7,9 @@ import { environment } from '../../environments/environment';
 import { DataService } from '../../data.service';
 import { CarouselAnimationComponent } from "../../component/carousel-animation/carousel-animation.component";
 
+
+import { Slide } from "../../component/carousel-animation/carousel.interface";
+
 import {
   AnimationType,
   scaleIn,
@@ -70,7 +73,7 @@ interface imgSlider  {
   ]
 })
 export class TopBannerComponent implements OnInit {
-  @ViewChild(CarouselAnimationComponent) carousel: CarouselAnimationComponent;
+  
   imageObj;
   get_imgSlideObj;
   typeOptions = [
@@ -90,7 +93,6 @@ export class TopBannerComponent implements OnInit {
   // ngAfterViewInit(){
   //  $('#carouselExampleCaptions').carousel();
   // }
-  animationType = AnimationType.Fade;
   get_imageSlider(){
     this.dataService.getData().subscribe(
       data => {
@@ -100,11 +102,55 @@ export class TopBannerComponent implements OnInit {
       }
     );
   }
+  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  // add animation
+  @ViewChild(CarouselAnimationComponent) carousel: CarouselAnimationComponent;
+  animationType = AnimationType.Fade;
+  
   setAnimationType(type) {
       this.animationType = type.value;
       setTimeout(() => {
         this.carousel.onNextClick();
       });
     }
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  slides: Slide[] = [
+    {
+      headline: "For Your Current Mood",
+      src:
+        "https://images.unsplash.com/photo-1567653418876-5bb0e566e1c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
+    },
+    {
+      headline: "Miouw",
+      src:
+        "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
+    },
+    {
+      headline: "In The Wilderness",
+      src:
+        "https://images.unsplash.com/photo-1557800634-7bf3c7305596?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2001&q=80"
+    },
+    {
+      headline: "Focus On The Writing",
+      src:
+        "https://images.unsplash.com/photo-1551410224-699683e15636?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
+    }
+  ];
+  animationTypes = [
+    {
+      name: "Scale",
+      value: AnimationType.Scale
+    },
+    {
+      name: "Fade",
+      value: AnimationType.Fade
+    },
+    {
+      name: "Flip",
+      value: AnimationType.Flip
+    },
+    {
+      name: "Jack In The Box",
+      value: AnimationType.JackInTheBox
+    }
+  ];
 }

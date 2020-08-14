@@ -31,7 +31,19 @@
 </div> -->
 
 <ngb-carousel *ngIf="imageObj" [interval] = "3500">
-    <ng-template ngbSlide *ngFor="let event of imageObj">
-      <img src="https:{{event.imagePath}}" alt="Random slide" width="100%" height="100%">
-    </ng-template>
-  </ngb-carousel>
+  <ng-template ngbSlide *ngFor="let event of imageObj">
+    <img src="https:{{event.imagePath}}" alt="Random slide" width="100%" height="100%">
+  </ng-template>
+</ngb-carousel>
+
+<!-- <p>test animation </p>
+<div class="container">
+  <app-carousel-animation [slides]="slides" [animationType]="animationType"></app-carousel-animation>
+  <div class="animition-type-selector">
+    <div class="title">Let's Play!</div>
+    <div *ngFor="let type of animationTypes" class="btn btn-outline-info" (click)="setAnimationType(type)"
+      [class.active]="animationType === type.value">
+      {{ type.name }}
+    </div>
+  </div>
+</div> -->
