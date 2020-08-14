@@ -1,4 +1,3 @@
-<p>This is top-banner</p>
 <!-- <div class="box-wrapper">
   <div class="carousel-contents">
     <div class="carousel-list-items">
@@ -22,28 +21,20 @@
   </ol>
 </div> -->
 <!--try new test here!-->
-<!-- <div class="container">
- <ngb-carousel *ngIf="imageObj">
-    <ng-template ngbSlide *ngFor="let event of imageObj">
-      <img src="https:{{event.imagePath}}" alt="Random slide">
-    </ng-template>
-  </ngb-carousel>
-</div> -->
-
-<ngb-carousel *ngIf="imageObj" [interval] = "3500">
+<!-- <ngb-carousel *ngIf="imageObj" [interval] = "3500">
   <ng-template ngbSlide *ngFor="let event of imageObj">
     <img src="https:{{event.imagePath}}" alt="Random slide" width="100%" height="100%">
   </ng-template>
-</ngb-carousel>
+</ngb-carousel> -->
 
-<!-- <p>test animation </p>
+<!-- <p>test animation </p>-->
 <div class="container">
   <app-carousel-animation [slides]="slides" [animationType]="animationType"></app-carousel-animation>
   <div class="animition-type-selector">
     <div class="title">Let's Play!</div>
-    <div *ngFor="let type of animationTypes" class="btn btn-outline-info" (click)="setAnimationType(type)"
+    <div *ngFor="let type of animationTypes" class="btn btn-outline-info btn-md" style="height: 45px; margin: 5px;" (click)="setAnimationType(type)"
       [class.active]="animationType === type.value">
       {{ type.name }}
     </div>
   </div>
-</div> -->
+</div> 

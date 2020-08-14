@@ -2,7 +2,7 @@ p {
   font-family: Lato;
 }
 .header-banner{
-  border: 1px solid #000;
+  border: 1px solid #eff7f6;
   width: 100%;
   height: 150px;
 }
@@ -20,7 +20,7 @@ p {
   cursor: pointer;
 }
 .header-container{
-  background-color: #fff;
+  background-color: #caf0f8;
   width: 100%;
   height: 55%;
   display: flex;
@@ -32,12 +32,14 @@ p {
 .header-container__search input {
   width: 300px;
   border-radius: 5px 0px 0px 5px;
-  border: 1px solid #a0aec0;
+  border: 1px solid #e4fdfa;
   padding-left: 10px;
   text-align: center
 }
 .header-lists{
-  background-color: #1e9d8a;
+  /* background-color: #1e9d8a; */
+  /* background-color: #00b4d8; */
+  
   width: 100%;
   height: 25%;
 }

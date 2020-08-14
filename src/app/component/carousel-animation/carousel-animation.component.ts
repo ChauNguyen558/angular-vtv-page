@@ -16,7 +16,7 @@ import {
 @Component({
   selector: 'app-carousel-animation',
   templateUrl: './carousel-animation.component.html',
-  styleUrls: ['./carousel-animation.component.css'],
+  styleUrls: ['./carousel-animation.component.scss'],
   animations: [
     trigger("slideAnimation", [
       /* scale */

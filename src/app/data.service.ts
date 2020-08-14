@@ -10,7 +10,7 @@ export class DataService {
   ) { }
   getData() {
     return this.httpClient.get(
-      '/assets/data-home-page.json',
+      '/assets/home-page-slider-images.json',
     );
   }
 }

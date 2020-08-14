@@ -35,7 +35,7 @@ interface imgSlider  {
 @Component({
   selector: 'top-banner',
   templateUrl: './top-banner.component.html',
-  styleUrls: ['./top-banner.component.css'],
+  styleUrls: ['./top-banner.component.scss'],
   animations: [
     trigger("slideAnimation", [
       /* scale */
