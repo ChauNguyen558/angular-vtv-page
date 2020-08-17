@@ -1,10 +1,21 @@
-<top-banner></top-banner>
-<section>
-  <div>this is home-component</div>
-  <div class="header-title">
-    <h3>Sản phẩm mới</h3>
-  </div>
+
+  <top-banner></top-banner>
   <div class="container">
-    
+    <section>
+      <div class="header-title">
+        <h3>Sản phẩm mới</h3>
+      </div>
+      <div class="section-content">
+        <div class="box-wrapper slider-multi">
+          <div *ngFor="let item of listNewGoods; let i = index">
+            <img src="{{img_serve}}{{item.goodsImagePath}}{{item.imageFile1}}" alt="" width="100px" height="100px">
+            <div class="good-desc">
+              <p class="good-name">{{item.goodsName}}</p>
+              <del class="regular-price">{{item.orgPrice}}</del> <span class="currency">VND</span>
+              <p class="best-price">{{item.bestPrice}}</p> <span class="currency">VND</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-</section>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders, HttpResponse, HttpErrorResponse } from '@angular/common/http';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, tap, map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class DataService {
@@ -16,6 +17,14 @@ export class DataService {
   getListNewGoods(){
     return this.httpClient.get(
       '/assets/home-page-new-goods.json',
-    );
-  }
+    )
+    .pipe(
+      map((res: Response) =>{
+        return res;
+      })
+      ,catchError((err: HttpErrorResponse)=> 
+        Observable.throw(err.status)
+      )
+    )
+  };
 }
