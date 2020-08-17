@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   getNewGoods(){
     this.dataService.getListNewGoods().subscribe(
       data => {
-        this.listNewGoods = data.areaBannerList;
+        this.listNewGoods = data;
         
         console.log(data);
       }
