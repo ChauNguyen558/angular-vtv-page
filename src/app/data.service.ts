@@ -13,4 +13,9 @@ export class DataService {
       '/assets/home-page-slider-images.json',
     );
   }
+  getListNewGoods(){
+    return this.httpClient.get(
+      '/assets/home-page-new-goods.json',
+    );
+  }
 }
